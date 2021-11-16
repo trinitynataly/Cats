@@ -27,21 +27,24 @@ function formatResult(data) {
 
 router.get('/list', function(req, res) {
     /*
-    ROUTE: /list (GET) - returns the list of all cats
+    ROUTE: /list
+    METHOD: GET
+    DESCRIPTION:
+      returns the list of all cats
     PARAMETERS:
-        limit - amount of results to return (int, 0...100, default 20, optional)
-        from - offset first X results (int, 0..., default 0, optional)
+      limit - amount of results to return (int, 0...100, default 20, optional)
+      from - offset first X results (int, 0..., default 0, optional)
     RESPONSE:
-        array of cat objects: [{
-            id: int (Cat's ID),
-            name: string (Cat's name),
-            breed: string (Cat's breed),
-            color: string (Cat's colour),
-            gender: string (Cat's sex),
-            age: string (Cat's age),
-            photo: string (Cat's photo URL),
-            description: text (Cat's description/notes)
-        }]
+      array of cat objects: [{
+        id: int (Cat's ID),
+        name: string (Cat's name),
+        breed: string (Cat's breed),
+        color: string (Cat's colour),
+        gender: string (Cat's sex),
+        age: string (Cat's age),
+        photo: string (Cat's photo URL),
+        description: text (Cat's description/notes)
+      }]
     */
     // Get today's date to filter out cats that had been already adopted today
     let today = new Date().toISOString().split('T')[0];
@@ -66,28 +69,31 @@ router.get('/list', function(req, res) {
 
 router.post('/search', parseUrlencoded, function(req, res) {
     /*
-    ROUTE: /search (POST) - performs a search in cats data and return result. For a successful search at least one of
-                            these parameters should be passed: name, min_age, max_age, breed, gender, color
+    ROUTE: /search
+    METHOD: POST
+    DESCRIPTION:
+      performs a search in cats data and return result. For a successful search at least one
+      of these parameters should be passed: name, min_age, max_age, breed, gender, color
     PARAMETERS:
-        name - cat's name (string, optional)
-        breed - cat's breed (string, optional)
-        gender - cat's sex (string, optional)
-        color - cat's color (string, optional)
-        min_age - cat's min age (int, 0..., default 0, optional)
-        max_age - cat's max age (int, 0..., default 0, optional)
-        limit - amount of results to return (int, 0...100, default 20)
-        from - offset first X results (int, 0..., default 0)
+      name - cat's name (string, optional)
+      breed - cat's breed (string, optional)
+      gender - cat's sex (string, optional)
+      color - cat's color (string, optional)
+      min_age - cat's min age (int, 0..., default 0, optional)
+      max_age - cat's max age (int, 0..., default 0, optional)
+      limit - amount of results to return (int, 0...100, default 20)
+      from - offset first X results (int, 0..., default 0)
     RESPONSE:
-        array of cat objects: [{
-            id: int (Cat's ID),
-            name: string (Cat's name),
-            breed: string (Cat's breed),
-            color: string (Cat's colour),
-            gender: string (Cat's sex),
-            age: string (Cat's age),
-            photo: string (Cat's photo URL),
-            description: text (Cat's description/notes)
-        }]
+      array of cat objects: [{
+        id: int (Cat's ID),
+        name: string (Cat's name),
+        breed: string (Cat's breed),
+        color: string (Cat's colour),
+        gender: string (Cat's sex),
+        age: string (Cat's age),
+        photo: string (Cat's photo URL),
+        description: text (Cat's description/notes)
+      }]
     */
     // Get today's date to filter out cats that had been already adopted today
     let today = new Date().toISOString().split('T')[0];
@@ -146,16 +152,19 @@ router.post('/search', parseUrlencoded, function(req, res) {
 
 router.get('/options', function(req, res) {
     /*
-    ROUTE: /options (GET) - returns the list of breeds, min age and max age for all un-adopted cats
+    ROUTE: /options
+    METHOD: GET
+    DESCRIPTION:
+      returns the list of breeds, min age and max age for all un-adopted cats
     PARAMETERS:
-        none
+      none
     RESPONSE:
-        {
-            result: true,
-            breeds: [...] (Array of breed names),
-            min_age: int (Min age of cats),
-            max_age: int (Max age of cats)
-        }
+      {
+        result: true,
+        breeds: [...] (Array of breed names),
+        min_age: int (Min age of cats),
+        max_age: int (Max age of cats)
+      }
     */
     // Init variable
     let breeds = [];
@@ -195,24 +204,24 @@ router.post('/adopt', parseUrlencoded, function(req, res) {
     /*
     ROUTE: /adopt (post) - Save cat as adopted, sends email to admin
     PARAMETERS:
-        id: int - cat ID in database,
-        first_name: string - First name of the adopter,
-        last_name: string - Last name of the adopter,
-        email: string - Email of the adopter,
-        phone: string - Phone of the adopter,
-        message: string - Message from the adopter,
+      id: int - cat ID in database,
+      first_name: string - First name of the adopter,
+      last_name: string - Last name of the adopter,
+      email: string - Email of the adopter,
+      phone: string - Phone of the adopter,
+      message: string - Message from the adopter,
     RESPONSES:
-        Successful adoption:
-        {
-            result: true,
-            id: int - ID of the cat,
-        }
-        Unsuccessful adoption
-        {
-            result: true,
-            id: int - ID of the cat,
-            error: Reason for failure
-        }
+      Successful adoption:
+      {
+        result: true,
+        id: int - ID of the cat,
+      }
+      Unsuccessful adoption
+      {
+        result: true,
+        id: int - ID of the cat,
+        error: Reason for failure
+      }
     */
     // Get today's date to filter out cats that had been already adopted today
     let today = new Date().toISOString().split('T')[0];
