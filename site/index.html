@@ -1,0 +1,242 @@
+<!doctype html>
+<!--
+Version: 1.6
+Last edited by: Natalia Pakhomova
+Last edit date: 14/11/2021
+ -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Adopt a cat - Owl Photography</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="img/favicon.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/fontawesome-free-5.15.3-web/css/all.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EV218E2J3G"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-EV218E2J3G');
+	</script>
+</head>
+<body>
+
+<!-- Home page -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container">
+		<a class="navbar-brand" href="/"><img src="img/logo-white.png" alt="Owl Photography" width="670" height="269"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="index.html">Adopt a cat</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" aria-current="page" href="all_cats.html">Our cats</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<a id="home"></a>
+<section class="cats-banner py-5 d-flex align-items-center">
+	<div class="container banner-container text-center p-5 text-white rounded-3">
+		<h2 class="display-1 fw-bold homepage_font text-white mb-5 h1">Adopt a Cat!</h2>
+	</div>
+</section>
+
+<section id="Services" class="page-section">
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<h1 class="section-heading text-uppercase" style="color: #68da98">Find your best friend!</h1>
+				<h2 class="section-subheading text-muted">Time spent with cats is never wasted!</h2>
+			</div>
+		</div>
+		<div class="row align-items-end">
+			<div class="col-12 col-md-2 mb-3">
+				<div class="form-group row align-items-center">
+					<div class="col-12 col-xl-4 pe-md-0 ps-md-0">
+						<label class="col-form-label w-100 text-xl-end" for="sex">Sex:&nbsp;</label>
+					</div>
+					<div class="col-12 col-xl-8 pe-md-0 ps-md-0">
+						<select class="form-select" id="sex">
+							<option selected value="">All</option>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-2 mb-3">
+				<div class="form-group row align-items-center">
+					<div class="col-12 col-xl-4 pe-md-0">
+						<label class="col-form-label w-100 text-xl-end" for="breed">Breed:&nbsp;</label>
+					</div>
+					<div class="col-12 col-xl-8 pe-md-0">
+						<select class="form-select" id="breed">
+							<option value="" selected>All</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-2 mb-3">
+				<div class="form-group row align-items-center">
+					<div class="col-12 col-xl-6 pe-md-0">
+						<label class="col-form-label w-100 text-xl-end" for="min_age">Min Age:&nbsp;</label>
+					</div>
+					<div class="col-12 col-xl-6 pe-md-0">
+						<select class="form-select" id="min_age">
+							<option value="" selected>All</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-2 mb-3">
+				<div class="form-group row align-items-center">
+					<div class="col-12 col-xl-6 pe-md-0">
+						<label class="col-form-label w-100 text-xl-end" for="min_age">Max Age:&nbsp;</label>
+					</div>
+					<div class="col-12 col-xl-6 pe-md-0">
+						<select class="form-select" id="max_age">
+							<option value="" selected>All</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-2 mb-3">
+				<div class="input-group">
+					<button type="button" class="btn btn-warning w-100" value="Clear" id="searchClear">Clear</button>
+				</div>
+			</div>
+			<div class="col-12 col-md-2 mb-3">
+				<div class="input-group">
+					<button type="button" class="btn btn-success w-100" value="submit" id="searchSubmit">Submit</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div id="searchResults" style="font-size: 1.2rem; padding-bottom: 3rem;" >
+			<div class="alert alert-info mpb-5 text-center" role="alert">Please choose at least one criterion to search!</div>
+		</div>
+	</div>
+</section>
+<footer class="page-section footer">
+	<div class="container">
+		<a class="navbar-brand" href="/"><img src="img/logo-white.png" alt="Owl Photography" width="670" height="269"></a>
+		<div class="row pt-5">
+			<div class="col-12 col-lg-10 col-xxl-11">
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link text-white" href="/">Adopt a cat</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-white" href="services.html">Our cats</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4">
+						<ul class="nav flex-column">
+							<li class="nav-item text-truncate">
+								<a class="nav-link text-white" href="tel:+61478947388"><i class="fas fa-phone-alt"></i> 0478&nbsp;947&nbsp;388</a>
+							</li>
+							<li class="nav-item text-truncate">
+								<a class="nav-link text-white" href="mailto:info@owlphotography.com.au"><i class="far fa-envelope"></i> info@owlphotography.com.au</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-2 col-xxl-1">
+				<ul class="nav flex-column">
+					<li class="nav-item social-links">
+						<a class="social h2 text-white" href="https://www.facebook.com/owlphotographyau/" target="_blank"><i class="fab fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;
+						<a class="social h2 text-white" href="https://www.instagram.com/owlphotographyau" target="_blank"><i class="fab fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row text-white pt-5 opacity-3">© Copyright Owl Photography 2021. ABN 74 200 987 525</div>
+	</div>
+</footer>
+<div class="modal" tabindex="-1" role="dialog" id="adoptDialog" aria-hidden="true">>
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Adoption Form</h5>
+		</div>
+		<form method="post" class="needs-validation" action="submit.php" novalidate id="AdoptionForm">
+			<input type="hidden" name="id" id="InputID" value="">
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-4 mb-3" id="CatPhoto">
+					</div>
+					<div class="col-8 mb-3">
+						<div class="form-group">
+							<label for="InputFirstName">You are adopting:</label>
+							<input type="text" class="form-control" name="cat_name" value="" id="InputCatName" readonly="readonly" placeholder="Cat Name" required>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 mb-3">
+						<div class="form-group">
+							<label for="InputFirstName">First Name</label>
+							<input type="text" class="form-control" name="first_name" value="" id="InputFirstName" placeholder="First Name" required>
+						</div>
+					</div>
+					<div class="col-12 mb-3">
+						<div class="form-group">
+							<label for="InputLastName">Last Name</label>
+							<input type="text" class="form-control" name="last_name" value="" id="InputLastName" placeholder="Last Name" required>
+						</div>
+					</div>
+					<div class="col-12 mb-3">
+						<div class="form-group">
+							<label for="InputEmail">Email</label>
+							<input type="email" class="form-control" name="email" value="" id="InputEmail" placeholder="Email Address" required>
+						</div>
+					</div>
+					<div class="col-12 mb-3">
+						<div class="form-group">
+							<label for="InputPhone">Phone</label>
+							<input type="tel" class="form-control" name="phone" value="" id="InputPhone" placeholder="Phone Number" required>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="form-group">
+							<label for="InputMessage">Message</label>
+							<textarea cols="80" rows="5" class="form-control" name="message" id="InputMessage" placeholder="Your message" required></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Send Request</button>
+				<button type="reset" class="btn btn-secondary" id="closeModal" closeModal="modal">Cancel</button>
+			</div>
+		</form>
+		</div>
+	</div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossOrigin="anonymous"></script>
+<script src="js/catsadoption.js"></script>
+<script>
+// Set mode to the search form
+form_type = "search";
+</script>
+</body>
+</html>

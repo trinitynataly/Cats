@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/*
+CSS Document
+Version: 1.5
+Last edited by: Natalia Pakhomova
+Last edit date: 17/07/2021
+ */
+
+.opacity-0 {
+  opacity: 0 !important;
+}
+.opacity-1 {
+  opacity: 0.2 !important;
+}
+.opacity-2 {
+  opacity: 0.4 !important;
+}
+.opacity-3 {
+  opacity: 0.6 !important;
+}
+.opacity-4 {
+  opacity: 0.8 !important;
+}
+.opacity-5 {
+  opacity: 1 !important;
+}
+
+.alert {
+  font-size: 2rem;
+}
+
+.cat-result {
+  font-size: 1.5rem;
+  padding-bottom: 50px;
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cat-row {
+  border-bottom: 1px solid #eee;
+}
+
+.cat-row img {
+  border-radius: 10px;
+}
+
+.cat-name em {
+  font-size: 1.8rem;
+}
+
+/* Maybe even support hover opacity shifts */
+.opacity-0h5 {
+  opacity: 0 !important;
+  transition: opacity 0.25s ease-in-out !important;
+}
+.opacity-0h5:hover {
+  opacity: 1 !important;
+}
+
+.navbar-brand img {
+  width: 120px;
+}
+
+.page-section {
+  padding: 4rem 0;
+}
+.page-section h2.section-subheading {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 4rem;
+}
+
+.homepage_font {
+  font-family: "Dancing Script", cursive;
+}
+
+.col-service {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.home-banner {
+  background-image: url("../img/Photos/IMG_4384.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.street-banner {
+  background-image: url("../img/Photos/IMG_1474-2.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.portraits-banner {
+  background-image: url("../img/Photos/IMG_2963.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.landscape-banner {
+  background-image: url("../img/Photos/IMG_6613.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.night-banner {
+  background-image: url("../img/Photos/IMG_0326.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.about-banner {
+  background-image: url("../img/Photos/IMG_5139.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.services-banner {
+  background-image: url("../img/Photos/IMG_2946.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.home-banner2 {
+  background-color: black;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.home-banner3 {
+  background-image: url("../img/Photos/daria-shatova-46TvM-BVrRI-unsplash.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cats-banner {
+  background-image: url("../img/Photos/james-sutton-dQ5G0h7sLno-unsplash_banner.jpg");
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.allcats-banner {
+	background-image: url("../img/Photos/jari-hytonen-YCPkW_r_6uA-unsplash.jpg");
+	min-height: 800px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+  }
+
+.footer {
+  background-color: black;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer ul li a:hover {
+  background: #fff;
+  color: #7fcdf4 !important;
+}
+
+.footer ul li a.social:hover {
+  background: transparent;
+}
+
+.footer ul li {
+  border-bottom: 1px solid #fff;
+}
+
+.footer ul li.social-links {
+  border-bottom: 0 none;
+  padding-top: 1em;
+}
+
+.footer .nav-link {
+  padding: 0.5rem 0;
+}
+
+.banner-container {
+  background: rgba(33, 37, 41, 0.75) !important;
+}
+
+.home-icon {
+  font-size: 2em;
+}
+
+.hi.item {
+  font-size: 5em;
+}
+
+@media (min-width: 576px) {
+  .navbar-brand img {
+    width: 160px;
+  }
+
+  .home-icon {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer ul li:last-child {
+    border-bottom: 0 none;
+  }
+
+  .footer ul li.social-links {
+    padding-top: 0;
+  }
+
+  .navbar-brand img {
+    width: 180px;
+  }
+
+  .home-icon {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand img {
+    width: 200px;
+  }
+
+  .home-icon {
+    font-size: 2.1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-brand img {
+    width: 250px;
+  }
+
+  .home-icon {
+    font-size: 2.2em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar-brand img {
+    width: 300px;
+  }
+
+  .home-icon {
+    font-size: 2.3em;
+  }
+}
